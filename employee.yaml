@@ -1,0 +1,110 @@
+apiVersion: digital-employee/v1
+kind: DigitalEmployee
+metadata:
+  id: de_indie_coldstart_growth_officer
+  name: 出海冷启动获客官
+  alias: Build-in-Public 内容引擎
+  repo: de-indie-coldstart-growth-officer
+  card_no: 4.4.1
+  group: indie
+  group_label: 独立开发者
+  phase: P0
+  complexity: M
+  score: 23
+  price: ¥99-249/月
+  channels:
+  - GitHub
+  - 小红书
+  - Coze扣子商店
+  - 腾讯WorkBuddy Skill市场
+  license: Proprietary
+  version: 1.0.0
+spec:
+  positioning: 产品冷启动期的"增长合伙人"：替你想清楚今天在哪个社区、对谁、说什么话
+  users: 冷启动期 3-6 个月的 C 端/PLG 产品独立开发者，尤其中出海方向
+  boundary: 做：选题挖掘、开发日志转营销内容、多平台改写、排期与复盘；不做：代刷量/水军互动、付费投放、虚假人设包装（社区信任不可替代，据 R1 调研）
+  kpi: 周均内容产出 ≥5 条；目标社区（X/Reddit/即刻/小红书）月均曝光与Profile访问环比 +20%；冷启动期官网/产品页月均自然访问增量
+  roi_summary: 月省约 45h × ¥80 ≈ ¥3600 vs 订阅成本，回报比 >14 倍
+  demand_refs:
+  - D28
+  - D01
+  - D11
+  - D22
+  demand_support: 充分
+  demand_evidence: 中
+runtime:
+  system_prompt: persona/system-prompt.md
+  boundary: persona/boundary.md
+  kpi: persona/kpi.md
+deliverables:
+  skills:
+  - slug: community-hotpost-digest
+    name: 社区热帖摘要
+    kind: private
+    path: skills/community-hotpost-digest
+    version: 1.0.0
+    maturity: implemented
+  - slug: narrative-rewrite
+    name: 叙事改写
+    kind: private
+    path: skills/narrative-rewrite
+    version: 1.0.0
+    maturity: contract-complete
+  - slug: painpoint-sellingpoint-match
+    name: 痛点-卖点匹配
+    kind: private
+    path: skills/painpoint-sellingpoint-match
+    version: 1.0.0
+    maturity: implemented
+  workflows:
+  - slug: wf-indie-coldstart-topic-mining
+    name: 选题挖掘
+    path: workflows/wf-indie-coldstart-topic-mining
+    version: 1.0.0
+    phase: P0
+    calls:
+    - community-hotpost-digest
+    - painpoint-sellingpoint-match
+  - slug: wf-indie-coldstart-log-to-content
+    name: 开发日志转营销内容
+    path: workflows/wf-indie-coldstart-log-to-content
+    version: 1.0.0
+    phase: P0
+    calls:
+    - painpoint-sellingpoint-match
+    - narrative-rewrite
+  - slug: wf-indie-coldstart-multichannel
+    name: 多平台改写适配
+    path: workflows/wf-indie-coldstart-multichannel
+    version: 1.0.0
+    phase: P0
+    calls:
+    - platform-format-adapter
+    - title-generator
+  - slug: wf-indie-coldstart-scheduling
+    name: 发布排期
+    path: workflows/wf-indie-coldstart-scheduling
+    version: 1.0.0
+    phase: P1
+    calls:
+    - platform-format-adapter
+    - scheduled-dispatch
+  - slug: wf-indie-coldstart-review
+    name: 数据反馈与选题迭代
+    path: workflows/wf-indie-coldstart-review
+    version: 1.0.0
+    phase: P1
+    calls:
+    - brief-generator
+  knowledge_base: kb/
+  connectors: connectors/bindings.yaml
+external_dependencies:
+- repo: agent-skills-core
+  version: 1.0.0
+  skills:
+  - brief-generator
+  - platform-format-adapter
+  - scheduled-dispatch
+  - title-generator
+  resolution: external
+spec_only_dependencies: []

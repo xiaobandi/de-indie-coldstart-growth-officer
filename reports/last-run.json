@@ -1,0 +1,36 @@
+{
+  "repo": "de-indie-coldstart-growth-officer",
+  "kind": "employee",
+  "run_at": "2026-09-30T23:54:21+08:00",
+  "cases": 238,
+  "passed": 238,
+  "failed": 0,
+  "by_suite": {
+    "structure": {
+      "total": 62,
+      "failed": 0
+    },
+    "contract": {
+      "total": 28,
+      "failed": 0
+    },
+    "scenario": {
+      "total": 117,
+      "failed": 0
+    },
+    "script": {
+      "total": 11,
+      "failed": 0
+    },
+    "doc": {
+      "total": 3,
+      "failed": 0
+    },
+    "compliance": {
+      "total": 17,
+      "failed": 0
+    }
+  },
+  "skipped": [],
+  "failures": []
+}
