@@ -7,6 +7,19 @@
 
 ![架构](docs/images/architecture.svg)
 
+## 效果（真实执行）
+
+![真实效果](workflows/wf-indie-coldstart-log-to-content/docs/images/00-effect.png)
+
+*上图为**真实效果对比**，不是示意图：左栏是输入材料与要求，右栏是该次执行的产出原文，
+两栏取自同一次真实执行记录。*
+
+- 完整台账：[`reports/real-run/wf-indie-coldstart-log-to-content.md`](reports/real-run/wf-indie-coldstart-log-to-content.md)
+- 录屏与终端回放：[`workflows/wf-indie-coldstart-log-to-content/docs/images/`](workflows/wf-indie-coldstart-log-to-content/docs/images/)（`08-demo-run.gif` / `08-demo-run.mp4` / `04-terminal-run.png`）
+- 使用示例：[`workflows/wf-indie-coldstart-log-to-content/docs/使用示例.md`](workflows/wf-indie-coldstart-log-to-content/docs/使用示例.md)
+> 实测判定：**通过**　·　可用度 4/5　·　编造数字 0 处　·　红线命中 9 次 / 拦截 9 次
+
+
 **一句话**：冷启动期 3-6 个月的 C 端/PLG 产品独立开发者，尤其中出海方向
 
 ---
@@ -102,7 +115,7 @@ de-indie-coldstart-growth-officer/
 
 | 项 | 值 |
 |---|---|
-| 技能文件数 | 176 |
+| 技能文件数 | 207 |
 | 多场景用例数 | 238 |
 | 用例通过 | 238 |
 | 验收结论 | ✅ 通过 |

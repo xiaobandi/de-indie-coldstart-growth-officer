@@ -1,68 +1,68 @@
 ---
-name: wf-indie-coldstart-log-to-content
+name: wf-indie-coldstart-scheduling
 description: >-
-  出海冷启动获客官 的「开发日志转营销内容」工作流：读取开发日志 → 提炼用户视角卖点 → 生成主帖初稿 → 人工确认。触发方式：人工（提交 commit 摘要/日志）。
-  当用户要完成「开发日志转营销内容」这件事、或触发了上述条件时使用。
+  出海冷启动获客官 的「发布排期」工作流：汇总待发内容 → 按各平台黄金时段排期 → 生成发布清单（对接发布工具）。触发方式：定时。
+  当用户要完成「发布排期」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_indie_coldstart_growth_officer
-  complexity: S
-  phase: P0
+  repo: de-indie-coldstart-growth-officer
+  visibility: private_to_employee
+  delivery: employee
+  complexity: M
+  phase: P1
   source: library
 ---
 
-# 开发日志转营销内容
+# 发布排期
 
-> 归属：**出海冷启动获客官**（`de-indie-coldstart-growth-officer`）　触发：人工（提交 commit 摘要/日志）　
-> 复杂度 S　阶段 P0
+> 归属：**出海冷启动获客官**（`de-indie-coldstart-growth-officer`）　触发：定时　
+> 复杂度 M　阶段 P1
 
 ## 一、这条工作流解决什么
 
-读取开发日志 → 提炼用户视角卖点 → 生成主帖初稿 → 人工确认
+汇总待发内容 → 按各平台黄金时段排期 → 生成发布清单（对接发布工具）
 
-**业务收益**：省 0.8h/日 ≈ ¥1900/月
+**业务收益**：省 0.2h/日 ≈ ¥480/月
 
 ## 二、调用的 SKILL（必填列，逐条锁定版本）
 
 | 技能名 | slug | 来源仓 | 版本 |
 |---|---|---|---|
-| `痛点-卖点匹配` | `painpoint-sellingpoint-match` | 本仓 | v1.0.0 |
-| `叙事改写` | `narrative-rewrite` | 本仓 | v1.0.0 |
+| `平台格式适配` | `platform-format-adapter` | core | v1.0.0 |
+| `定时排期` | `scheduled-dispatch` | core | v1.0.0 |
 
 > 公共技能来自 `agent-skills-core@1.0.0`，本仓库只做外部依赖引用，
 > **不内联复制**其正文——这是三层仓库体系的硬规则，避免同一能力多份副本各自漂移。
 
 ## 三、执行步骤（每步四要素齐备）
 
-### 步骤 1：读取开发日志
+### 步骤 1：汇总待发内容
 
-- **做**：读取开发日志
+- **做**：汇总待发内容
 - **输入来源**：用户提供的原始材料（工作流第 1 步没有「上一步」）/ 本员工知识库 `kb/` / 连接器只读数据；三者皆空时必须停在 G1 闸门
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 2：提炼用户视角卖点
+### 步骤 2：按各平台黄金时段排期
 
-- **做**：提炼用户视角卖点
+- **做**：按各平台黄金时段排期
 - **输入来源**：步骤 1 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 3：生成主帖初稿
+### 步骤 3：生成发布清单（对接发布工具）
 
-- **做**：生成主帖初稿
+- **做**：生成发布清单（对接发布工具）
 - **输入来源**：步骤 2 的产出 / 本员工知识库 `kb/` / 连接器只读数据
-- **依据与结论**：把本步结论对应到具体输入项
-- **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
-
-### 步骤 4：人工确认
-
-- **做**：人工确认
-- **输入来源**：步骤 3 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 

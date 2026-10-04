@@ -1,0 +1,15 @@
+{
+  "name": "wf-indie-coldstart-multichannel",
+  "title": "多平台改写适配",
+  "kind": "workflow",
+  "owner": "de-indie-coldstart-growth-officer",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "按 X/即刻/小红书/掘金格式改写 → hashtag/封面建议 → 排版预览",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

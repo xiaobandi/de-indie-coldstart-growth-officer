@@ -1,0 +1,15 @@
+{
+  "name": "narrative-rewrite",
+  "title": "叙事改写",
+  "kind": "skill",
+  "owner": "de-indie-coldstart-growth-officer",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "把技术日志改写为用户视角的 build-in-public 故事（开发日志 → 叙事帖）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
