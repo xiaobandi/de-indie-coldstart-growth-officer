@@ -3,7 +3,7 @@ name: wf-indie-coldstart-review
 description: >-
   出海冷启动获客官 的「数据反馈与选题迭代」工作流：回捞各平台表现 → 归因高/低效选题 → 更新选题权重 → 周报复盘。触发方式：定时（每周）。
   当用户要完成「数据反馈与选题迭代」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

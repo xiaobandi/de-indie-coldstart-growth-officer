@@ -3,7 +3,7 @@ name: wf-indie-coldstart-log-to-content
 description: >-
   出海冷启动获客官 的「开发日志转营销内容」工作流：读取开发日志 → 提炼用户视角卖点 → 生成主帖初稿 → 人工确认。触发方式：人工（提交 commit 摘要/日志）。
   当用户要完成「开发日志转营销内容」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

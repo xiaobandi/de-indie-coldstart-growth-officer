@@ -17,7 +17,7 @@ metadata:
   - 小红书
   - Coze扣子商店
   - 腾讯WorkBuddy Skill市场
-  license: Proprietary
+  license: Apache-2.0
   version: 1.0.0
 spec:
   positioning: 产品冷启动期的"增长合伙人"：替你想清楚今天在哪个社区、对谁、说什么话

@@ -2,7 +2,7 @@
 name: painpoint-sellingpoint-match
 description: >-
   把用户痛点与产品功能映射成有说服力的文案初稿，连接需求与供给。当用户提到痛点卖点、卖点匹配、需求对应、痛点文案、pain point matching、value proposition fit 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
